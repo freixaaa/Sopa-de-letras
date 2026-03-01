@@ -1,16 +1,12 @@
 import random
 import string
 
-"""
-documentación: crea una matriz cuadrada de tamaño n rellena con letras aleatorias.
-"""
 def crear_matriz(tamano):
+    # se crea la cuadricula base con letras aleatorias
     return [[random.choice(string.ascii_lowercase) for _ in range(tamano)] for _ in range(tamano)]
 
-"""
-documentación: inserta una palabra de forma horizontal en una fila aleatoria.
-"""
 def insertar_palabra_horizontal(matriz, palabra):
+    # se inserta una palabra de forma horizontal en la matriz
     tam = len(matriz)
     palabra = palabra.lower()
     
@@ -27,10 +23,8 @@ def insertar_palabra_horizontal(matriz, palabra):
 
     return posiciones
 
-"""
-documentación: coordina la creación de la matriz y la inserción de las palabras.
-"""
 def generar_sopa(palabras, tam=15):
+    # se coordina la creacion y la integración de la sopa de letras
     matriz = crear_matriz(tam)
     posiciones_palabras = []
 
